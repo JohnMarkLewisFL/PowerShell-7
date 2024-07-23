@@ -1,0 +1,1 @@
+This word cloud script requires the PSWordCloud module. When I wrote the script, the PSWordCloud module was not compatible with Windows PowerShell (5.1).
