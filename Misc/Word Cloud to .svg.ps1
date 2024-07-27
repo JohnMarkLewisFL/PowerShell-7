@@ -98,11 +98,12 @@ If ($OpenFileDialog.FileName) {
             $WordFontSize[$word] = Get-Random -Maximum 20 -Minimum 1
         }
 
-        # Create the word cloud with -ImageSize set to the user-specified $Resolution and -AllowRotaton to All
+        # Create the word cloud with -ImageSize set to the user-specified $Resolution 
+        # To allow a bigger variety of rotation for words, set-AllowRotaton to All
         if ($null -ne $FocusWord) {
-            New-WordCloud -Path $SaveFileDialog.FileName -ImageSize $Resolution -Typeface $SelectedFontString -WordSizes $WordFontSize -AllowRotation All -FocusWord $FocusWord
+            New-WordCloud -Path $SaveFileDialog.FileName -ImageSize $Resolution -Typeface $SelectedFontString -WordSizes $WordFontSize -FocusWord $FocusWord
         } else {
-            New-WordCloud -Path $SaveFileDialog.FileName -ImageSize $Resolution -Typeface $SelectedFontString -WordSizes $WordFontSize -AllowRotation All
+            New-WordCloud -Path $SaveFileDialog.FileName -ImageSize $Resolution -Typeface $SelectedFontString -WordSizes $WordFontSize
         }
     }
 }
